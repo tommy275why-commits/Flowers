@@ -3,38 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Flower Shop</title>
+    <title>Local Flower Shop</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f9f1f1; color: #333; }
-        header { background-color: #ffb7b2; padding: 20px; }
-        .flower-container { display: flex; justify-content: center; gap: 20px; margin-top: 30px; }
-        .flower-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        /* Modern & Clean Aesthetics */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #fdfbf7; 
+            color: #4a4a4a; 
+        }
+        header { 
+            background: linear-gradient(135deg, #ffccd5, #fbc4ab); 
+            padding: 60px 20px; 
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        header h1 { 
+            margin: 0; 
+            font-size: 2.5rem; 
+            color: #5c3d46;
+            letter-spacing: 1px;
+        }
+        header p { 
+            margin: 10px 0 0; 
+            font-size: 1.1rem; 
+            color: #7d5c65; 
+            font-style: italic;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #5c3d46;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        /* Grid Layout for Flowers */
+        .flower-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 30px; 
+        }
+        .flower-card { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 12px; 
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.04); 
+            transition: transform 0.2s ease;
+            border: 1px solid #f0e6df;
+        }
+        .flower-card:hover {
+            transform: translateY(-5px);
+        }
+        .emoji {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .flower-card h3 { 
+            margin: 10px 0; 
+            color: #333; 
+        }
+        .price { 
+            font-weight: bold; 
+            color: #e56b6f; 
+            font-size: 1.2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            background-color: #f7ede2;
+            color: #8b7365;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Welcome to Bloom Boutique 🌸</h1>
-        <p>The freshest flowers, picked just for you.</p>
+        <h1>The Local Flower Shop 🌸</h1>
+        <p>Handcrafted bouquets made with love for the neighborhood.</p>
     </header>
 
-    <main>
-        <h2>Our Best Sellers</h2>
-        <div class="flower-container">
+    <div class="container">
+        <h2>Fresh Seasonal Picks</h2>
+        
+        <div class="flower-grid">
             <div class="flower-card">
-                <h3>Red Roses 🌹</h3>
-                <p>$15.00 a dozen</p>
+                <span class="emoji">🌹</span>
+                <h3>Classic Red Roses</h3>
+                <p>Perfect for romance and elegant occasions.</p>
+                <p class="price">$15.00</p>
             </div>
+            
             <div class="flower-card">
-                <h3>Sunflowers 🌻</h3>
-                <p>$12.00 a bunch</p>
+                <span class="emoji">🌻</span>
+                <h3>Bright Sunflowers</h3>
+                <p>Guaranteed to bring sunshine into any room.</p>
+                <p class="price">$12.00</p>
             </div>
+            
             <div class="flower-card">
-                <h3>Tulips 🌷</h3>
-                <p>$10.00 a bunch</p>
+                <span class="emoji">🌷</span>
+                <h3>Spring Tulips</h3>
+                <p>A colorful mix of fresh, vibrant spring colors.</p>
+                <p class="price">$10.00</p>
             </div>
         </div>
-    </main>
+    </div>
+
+    <footer>
+        <p>© 2026 Made for a Special Friend | Built with GitHub</p>
+    </footer>
 
 </body>
 </html>
