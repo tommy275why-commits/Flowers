@@ -27,8 +27,7 @@
             overflow-x: hidden;
         }
 
-        /* --- COOL ANIMATIONS --- */
-        /* Smooth Fade-In Animation for the whole page */
+        /* Smooth Page Fade-In Animation */
         @keyframes fadeInPage {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -55,7 +54,7 @@
             margin-left: 15px;
             transition: color 0.2s;
         }
-        .nav-link:hover {
+        .nav-link:hover, .nav-link.active {
             color: var(--primary-green) !important;
         }
 
@@ -167,17 +166,6 @@
             background-color: white;
             border-top: 1px solid #f3eee3;
         }
-        .icon-box {
-            background-color: #f0f7f4;
-            color: var(--primary-green);
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-        }
         .story-title {
             font-family: 'Playfair Display', serif;
             color: var(--dark-green);
@@ -191,9 +179,11 @@
         }
     </style>
 </head>
-<body class="animate-fade-in"> <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm py-3">
+<body class="animate-fade-in">
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm py-3">
         <div class="container">
-            <a class="navbar-brand" href="index.html">🌿 Karson's Botanical</a>
+            <a class="navbar-brand" href="index.html">Karson's Botanical</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -211,11 +201,11 @@
 
     <section class="hero shadow-sm">
         <div class="container">
-            <div class="badge-custom">✨ Handmade with love</div>
-            <h1 class="display-3 fw-bold">Flowers that make<br>you <span>go wheee!</span></h1>
-            <p class="mx-auto fs-5 my-4" style="max-width: 650px; color: var(--text-light);">Bright, fluffy, hand-arranged blooms from our little home studio straight to your doorstep. Every bouquet is made with a smile.</p>
+            <div class="badge-custom">Handcrafted Floral Design</div>
+            <h1 class="display-3 fw-bold">Thoughtfully curated<br>seasonal <span>arrangements</span></h1>
+            <p class="mx-auto fs-5 my-4" style="max-width: 650px; color: var(--text-light);">Custom, hand-tied floral bouquets designed right in our local studio. Bringing fresh, intentional design straight to your space.</p>
             <div class="mt-4">
-                <a href="shop.html" class="btn btn-custom-primary me-2">Shop Flowers →</a>
+                <a href="shop.html" class="btn btn-custom-primary me-2">View Collection</a>
                 <a href="about.html" class="btn btn-custom-secondary">Our Story</a>
             </div>
         </div>
@@ -223,8 +213,8 @@
 
     <main class="container my-5 py-5">
         <div class="section-title text-center mb-5">
-            <span>The Collection</span>
-            <h2 class="mt-2">All our blooms</h2>
+            <span>Featured Florals</span>
+            <h2 class="mt-2">Seasonal Favorites</h2>
         </div>
         
         <div class="row g-4 justify-content-center">
@@ -232,9 +222,9 @@
                 <div class="flower-card h-100">
                     <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?q=80&w=600&auto=format&fit=crop" alt="Pink Peonies" class="flower-img">
                     <div class="p-4 text-center">
-                        <h3 class="card-title-custom">Blushing Peonies</h3>
-                        <p class="small text-muted my-2">Soft, lush pink peonies arranged in a ceramic vase.</p>
-                        <div class="price mt-3">$45.00</div>
+                        <h3 class="card-title-custom">The Signature Peony</h3>
+                        <p class="small text-muted my-2">A delicate bundle of fresh seasonal pink peonies arranged nicely with subtle greenery.</p>
+                        <div class="price mt-3">$55.00</div>
                     </div>
                 </div>
             </div>
@@ -243,9 +233,9 @@
                 <div class="flower-card h-100">
                     <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=600&auto=format&fit=crop" alt="Sunflowers" class="flower-img">
                     <div class="p-4 text-center">
-                        <h3 class="card-title-custom">Country Sunshine</h3>
-                        <p class="small text-muted my-2">Bright golden sunflowers mixed with field daisies.</p>
-                        <div class="price mt-3">$38.00</div>
+                        <h3 class="card-title-custom">Garden Sunshine Basket</h3>
+                        <p class="small text-muted my-2">Vibrant field sunflowers hand-tied with rustic twine. Simple and bright.</p>
+                        <div class="price mt-3">$40.00</div>
                     </div>
                 </div>
             </div>
@@ -254,9 +244,9 @@
                 <div class="flower-card h-100">
                     <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?q=80&w=600&auto=format&fit=crop" alt="Wildflowers" class="flower-img">
                     <div class="p-4 text-center">
-                        <h3 class="card-title-custom">Wildfield Magic</h3>
-                        <p class="small text-muted my-2">A whimsical, colorful mix of fresh seasonal wildflowers.</p>
-                        <div class="price mt-3">$42.00</div>
+                        <h3 class="card-title-custom">The Whimsical Meadow</h3>
+                        <p class="small text-muted my-2">An organic, airy mixture of seasonal wildflowers that feels fresh out of a country field.</p>
+                        <div class="price mt-3">$48.00</div>
                     </div>
                 </div>
             </div>
@@ -266,28 +256,19 @@
     <section class="story-section py-5 mt-5">
         <div class="container py-4" style="max-width: 800px;">
             
-            <div class="d-flex align-items-start mb-5">
-                <div class="icon-box me-4">🌱</div>
-                <div>
-                    <h3 class="story-title h4 mb-2">How it all started</h3>
-                    <p class="text-muted mb-0">It began with a tiny garden and a big dream. Our founder, Karson, started growing flowers in her back garden as a hobby — a few packets of seeds and a whole lot of hope.</p>
-                </div>
+            <div class="mb-5">
+                <h3 class="story-title h4 mb-2">The Botanical Process</h3>
+                <p class="text-muted mb-0">It began with a small home garden and a vision for clean, intentional design. Our founder, Karson, started growing and compiling local flowers as a creative outlet, which naturally evolved into a dedicated studio practice focused on premium aesthetics.</p>
             </div>
 
-            <div class="d-flex align-items-start mb-5">
-                <div class="icon-box me-4">🏡</div>
-                <div>
-                    <h3 class="story-title h4 mb-2">Our home studio</h3>
-                    <p class="text-muted mb-0">We work out of a converted potting shed. It's cozy, it's chaotic, and it smells absolutely heavenly. Every bouquet is made by hand right here.</p>
-                </div>
+            <div class="mb-5">
+                <h3 class="story-title h4 mb-2">The Design Studio</h3>
+                <p class="text-muted mb-0">Operating locally out of a private studio, everything is processed, conditioned, and styled by hand. We prioritize absolute quality and structure over high-volume production.</p>
             </div>
 
-            <div class="d-flex align-items-start">
-                <div class="icon-box me-4">✨</div>
-                <div>
-                    <h3 class="story-title h4 mb-2">Why we do it</h3>
-                    <p class="text-muted mb-0">We believe flowers have a superpower: they make people smile. We love being a part of that neighborhood magic.</p>
-                </div>
+            <div>
+                <h3 class="story-title h4 mb-2">Our Philosophy</h3>
+                <p class="text-muted mb-0">We believe floral styling is an art form that transforms interior spaces. Every stem is chosen deliberately to ensure balance, movement, and structural longevity.</p>
             </div>
 
         </div>
